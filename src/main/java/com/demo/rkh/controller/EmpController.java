@@ -66,7 +66,7 @@ public class EmpController {
 		}
 	}
 	
-	@GetMapping("/emp/{name}")
+	@GetMapping("/emp/name/{name}")
 	public ResponseEntity<?> getEmployeeByName(@PathVariable String name){
 		Optional <Emp> empOptional  = empRepository.findByEmpName(name);
 		Dept dept;

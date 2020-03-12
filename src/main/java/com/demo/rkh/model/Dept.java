@@ -1,5 +1,6 @@
 package com.demo.rkh.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -25,7 +26,7 @@ public class Dept {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="dept_id")
-	private List<Emp> emps;
+	private List<Emp> emps = new ArrayList<Emp>();
 			
 	public int getId() {
 		return id;
